@@ -1,0 +1,22 @@
+<mat-card >
+    <mat-card-title>
+        <h2 style="color: brown;">Do you own a bike?</h2>
+        <mat-radio-group aria-label="Select an option">
+            <!-- <mat-radio-button class="mat-rb mat-form-field" value="select">Select</mat-radio-button> -->
+            <div (click)="neitherOptions()">
+                <mat-radio-button class="mat-rb mat-form-field" value="own">Yes, I already own one</mat-radio-button>
+            </div>
+            <div (click)="showBorrowOptions()" >
+                <mat-radio-button class="mat-rb mat-form-field" value="borrow">Borrow</mat-radio-button>
+                <h2 *ngIf="showBorrow" style="color:green;">*Coming Soon! Show borrow opitions*</h2>
+            </div>
+            <div (click)="showBuyOptions()">
+                <mat-radio-button class="mat-rb mat-form-field" value="buy">Buy</mat-radio-button>
+                <h2 *ngIf="showBuy" style="color: green;">*Coming Soon! Show buy options*</h2>
+            </div>
+            <div (click)="neitherOptions()">
+                <mat-radio-button class="mat-rb mat-form-field" value="noBike">Not using a bike</mat-radio-button>
+            </div>
+        </mat-radio-group>
+    </mat-card-title>
+</mat-card>
